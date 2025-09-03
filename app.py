@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import re
 import string
+import joblib
 
 # Text preprocessing function
 def preprocess_text(text):
@@ -13,12 +14,15 @@ def preprocess_text(text):
 
 @st.cache_resource
 def load_assets():
-    with open('best_logistic_regression_model_issue.pkl', 'rb') as f_issue:
-        model_issue = pickle.load(f_issue)
-    with open('best_logistic_regression_model_product.pkl', 'rb') as f_product:
-        model_product = pickle.load(f_product)
-    with open('tfidf_vectorizer.pkl', 'rb') as f_vectorizer:
-        vectorizer = pickle.load(f_vectorizer)
+    # Load the Issue classification model
+    model_issue = joblib.load('issue_model.joblib')
+    
+    # Load the Product classification model
+    model_product = joblib.load('product_model.joblib')
+        
+    # Load the fitted TfidfVectorizer
+    vectorizer = joblib.load('vectorizer.joblib')
+        
     return model_issue, model_product, vectorizer
 
 model_issue, model_product, vectorizer = load_assets()
