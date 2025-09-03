@@ -26,57 +26,52 @@ Model Persistence: Joblib / Pickle
 
 📂 Project Structure
 .
-├── issue_model.joblib                          # Trained model for 'Issue'
-├── product_model.joblib                        # Trained model for 'Product'
-├── tfidf_vectorizer.joblib                     # Fitted TF-IDF Vectorizer
-├── app.py                                      # The Streamlit application script
-├── requirements.txt                            # Required Python libraries
-└── README.md                                   # Project documentation
+├── issue_model.joblib        # Trained model for 'Issue'
+├── product_model.joblib      # Trained model for 'Product'
+├── tfidf_vectorizer.joblib   # Fitted TF-IDF Vectorizer
+├── app.py                    # The Streamlit application script
+├── requirements.txt          # Required Python libraries
+└── README.md                 # Project documentation
+
 ⚙️ Setup and Installation
 To run this project on your local machine, follow these steps:
 
 1. Clone the Repository
 
-Bash
-
 git clone https://github.com/Rakul555/Consumer-complaine-analyzer
 cd Consumer-complaine-analyzer
+
 2. Create and Activate a Virtual Environment
 
 It's highly recommended to use a virtual environment to keep project dependencies isolated.
 
 Create the environment:
 
-Bash
-
 python -m venv venv
+
 Activate the environment:
 
 On Windows:
 
-Bash
-
 venv\Scripts\activate
+
 On macOS/Linux:
 
-Bash
-
 source venv/bin/activate
+
 3. Install Required Libraries
 
 Use the requirements.txt file to install all necessary packages.
 
-Bash
-
 pip install -r requirements.txt
+
 🖥️ How to Use the Application
 1. Run the Streamlit App
 
 Once the setup is complete, run the following command in your terminal from the project's root directory:
 
-Bash
-
 streamlit run app.py
+
 2. Use the Web Interface
 
 Your web browser will automatically open to the application's local URL (e.g., http://localhost:8501).
